@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ roomname }}{% endblock %}
+
+{% block styles %}
+<link href="/static/styles.css" rel="stylesheet">
+<link href="/static/room.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+    <script src="/msg.js"></script>
+{% endblock %}
+
+{% block main %}
+    <div id="bar">
+        <b id="roomname">{{ roomname }}</b>
+        <p id="invite">Invite code: {{ invite }}</p>
+        <button id="back-button" onclick="location.href='/'">Back</button>
+    </div>
+    <div id="input-message-container">
+        <div id="messages"></div>
+        <div>
+            <input type="text" id="msg" placeholder="Message" />
+        </div>
+    </div>
+{% endblock %}

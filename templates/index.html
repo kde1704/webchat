@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Web Chat{% endblock %}
+
+{% block styles %}
+<link href="/static/styles.css" rel="stylesheet">
+<link href="/static/index.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <div>
+        <button id="new-room-button" onclick="location.href='/new'">New Room</button>
+        <button id="join-room-button" onclick="location.href='/join'">Join Room</button>
+        <button id="logout-button" onclick="location.href='/logout'">Logout</button>
+        <button id="delete-button" onclick="location.href='/delete'">Delete Account</button>
+    </div>
+    <div id="rooms-container">
+        {% if rooms %}
+            {% for id, name, invite in rooms %}
+                <div id="{{ id }}" class="room">
+                    <div id="room-info">
+                        <b>{{ name }}</b>
+                        <p>{{ invite }}</p>
+                    </div>
+                    <div id="room-link">
+                        <button id="room-link-button" onclick="location.href='/rooms/{{ id }}'">Enter</button>
+                        <button id="room-leave-button" onclick="if(confirm('Are you sure you want to leave this room? This cannot be undone')){location.href='/leave/{{ id }}';}">Leave</button>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
+

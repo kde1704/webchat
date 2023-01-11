@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}New Room{% endblock %}
+
+{% block styles %}<link href="/static/styles.css" rel="stylesheet">{% endblock %}
+
+{% block main %}
+    <div class="center">
+        <form action="/new" method="POST">
+            {% if error %}
+            <p class="error">Roomname too long!</p>
+            {% endif %}
+            {% if roomname_already_exists %}
+            <p class="error">A room with that name already exists!</p>
+            {% endif %}
+            <input name="roomname" type="text" maxlength="32" placeholder="Room Name"><br>
+            <button type="submit">Create Room</button>
+        </form>
+    </div>
+{% endblock %}
+

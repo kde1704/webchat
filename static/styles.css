@@ -1,0 +1,56 @@
+body {
+    background-color: #191919;
+}
+
+p, b, h1 {
+    font-family: Verdana;
+    color: #AFAFAF;
+}
+
+a {
+    color: #4F4FFF;
+    text-decoration: none;
+    font-family: Verdana;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=text], input[type=password] {
+    background-color: #030303;
+    color: #AFAFAF;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #2F2F2F;
+    box-sizing: border-box;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+}
+
+.red {
+    background-color: #E01F1F;
+}
+
+.error {
+    color: #E01F1F;
+}

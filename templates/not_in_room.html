@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Room not found{% endblock %}
+{% block styles %}<link href="/static/styles.css" rel="stylesheet">{% endblock %}
+{% block main %}
+    <div class="center">
+        <h1 style="text-align: center">Room not found</h3>
+        <p style="text-align: center">Either this room does not exist, or you are not a member of this room.</p>
+        <button onclick="location.href='/'">Back</button>
+    </div>
+{% endblock %}
+

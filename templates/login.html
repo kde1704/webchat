@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block styles %}<link href="/static/styles.css" rel="stylesheet">{% endblock %}
+{% block main %}
+    <div class="center">
+        {% if register %}
+        <p class="description">Register</p>
+        <form action="/register" method="POST">
+        {% else %}
+        <p class="description">Log In</p>
+        <form action="/login" method="POST">
+        {% endif %}
+            {% if error %}
+                <p style="color:red">Username already exists!</p>
+            {% endif %}
+            {% if invalid %}
+                <p style="color:red">Incorrect username and/or password</p>
+            {% endif %}
+            <input name="username" placeholder="Username" type="text" autocomplete="off" maxlength="32" autofocus required><br>
+            <input name="password" placeholder="Password" type="password" maxlength="32" required><br>
+            {% if register %}
+                <button type="submit">Register</button>
+            {% else %}
+                <button type="submit">Login</button>
+            {% endif %}
+        </form>
+        {% if register %}
+            <p>Already have an account? Log in <a href="/login">here.</a><p>
+        {% else %}
+            <p>Don't have an account? Register <a href="/register">here.</a><p>
+        {% endif %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Delete Account{% endblock %}
+{% block styles %}<link href="/static/styles.css" rel="stylesheet">{% endblock %}
+{% block main %}
+    <div class="center">
+        <p class="description">Enter credentials to delete your account</p>
+        <form action="/delete" method="POST">
+            {% if invalid %}
+                <p style="color:red">Incorrect password</p>
+            {% endif %}
+            <input name="password" placeholder="Password" type="password" maxlength="32" required><br>
+            <button class="red" type="submit">Delete Account</button>
+        </form>
+        <p>Return to home <a href="/">here.</a><p>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,86 @@
+body {
+    background-color: #191919;
+}
+
+p, a {
+    font-size: 12px;
+}
+
+b {
+    font-size: 14px;
+}
+
+.room {
+    background-color: #030303;
+    border: 2px solid #DDDDDD;
+    width: 300px;
+    height: 80px;
+    border-radius: 6px;
+}
+
+#room-info {
+    float: left;
+    width: 170px;
+    height: 70px;
+    margin: 15px;
+}
+
+#room-link {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+}
+
+#room-link-button {
+    position: relative;
+    padding: 0 0;
+    top: -5px;
+    height: 20px;
+}
+
+#room-leave-button {
+    position: relative;
+    background-color: #E01F1F;
+    bottom: 15px;
+    padding: 0 0;
+    height: 20px;
+}
+
+#rooms-container {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translate(-50%, 0%);
+    width: 90%;
+}
+
+#new-room-button {
+    width: calc(23% - 2px);
+    height: 42px;
+    margin: 1%;
+    float: left;
+}
+
+#join-room-button {
+    width: calc(23% - 2px);
+    height: 42px;
+    margin: 1%;
+}
+
+#logout-button {
+    background-color: #E01F1F;
+    width: calc(23% - 2px);
+    height: 42px;
+    margin: 1%;
+}
+
+#delete-button {
+    background-color: #E01F1F;
+    width: calc(23% - 2px);
+    height: 42px;
+    margin: 1%;
+}
